@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-26 20:57:40</sys_created_on>
+        <sys_id>331678c5dba3330074972a9a4896194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="CourseCatalog" source="x_376477_coursecat">6de43c45dba3330074972a9a4896195a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CourseCatalog">6de43c45dba3330074972a9a4896195a</sys_scope>
+        <sys_update_name>sys_atf_step_331678c5dba3330074972a9a4896194b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-26 20:57:40</sys_updated_on>
+        <table/>
+        <test display_value="CourseSpec">cd06f4c5dba3330074972a9a489619fd</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=331678c5dba3330074972a9a4896194b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>331678c5dba3330074972a9a4896194b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-26 20:57:40</sys_created_on>
+        <sys_id>0b2630c5dba3330074972a9a489619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-26 20:57:40</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>331678c5dba3330074972a9a4896194b</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-26 20:57:40</sys_created_on>
+        <sys_id>cb2630c5dba3330074972a9a489619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-26 20:57:40</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual) {&#13;
+    describe('Course', function(){&#13;
+    var course,&#13;
+        thisStudent;&#13;
+    &#13;
+     beforeEach(function () {&#13;
+        course = new Course();&#13;
+        thisStudent = new Student();&#13;
+    });&#13;
+    &#13;
+    it('should be able to add student', function () {&#13;
+&#13;
+        course.addStudent(thisStudent);&#13;
+&#13;
+        expect(course.getStudent(0)).toBe(thisStudent);&#13;
+    });&#13;
+&#13;
+    it('should be able to remove a student', function () {&#13;
+&#13;
+        course.addStudent(thisStudent);&#13;
+        course.removeStudent(0);&#13;
+&#13;
+        expect(course.getStudent(0)).not.toBeDefined();&#13;
+    });&#13;
+});&#13;
+&#13;
+})(outputs, steps, stepResult, assertEqual);&#13;
+jasmine.getEnv().execute();</value>
+        <variable display_value="">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>
